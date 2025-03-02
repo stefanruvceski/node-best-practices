@@ -1,0 +1,15 @@
+{
+  "name": "@monorepo/error-handling",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "@monorepo/logger": "workspace:*",
+    "@monorepo/global-context": "workspace:*"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "references": [
+    { "path": "../../packages/common-middlewares" },
+    { "path": "../../packages/database" }
+  ],
+  "include": ["src/**/*"]
+}

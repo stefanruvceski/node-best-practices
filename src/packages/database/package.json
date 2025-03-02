@@ -1,0 +1,25 @@
+{
+  "name": "@monorepo/database",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "dev": "tsc -w",
+    "db:migrate": "prisma migrate dev --schema src/prisma/schema.prisma",
+    "db:migrate:create": "npx prisma migrate dev --create-only --schema src/prisma/schema.prisma",
+    "db:push": "prisma db push --schema src/prisma/schema.prisma",
+    "prisma:generate": "prisma generate --schema src/prisma/schema.prisma",
+    "db:studio": "prisma studio --schema src/prisma/schema.prisma",
+    "db:reset": "prisma migrate reset --schema src/prisma/schema.prisma"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "prisma": "^6.4.1"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.4.1",
+    "@monorepo/config": "workspace:*"
+  }
+}
