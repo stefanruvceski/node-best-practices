@@ -8,13 +8,11 @@ type EnvType = {
 };
 
 export function loadEnv(serviceName: string): EnvType {
-  // Učitaj root .env
   const rootEnv = dotenv.config({
     path: resolve(process.cwd(), "../../../.env"),
   });
   dotenvExpand.expand(rootEnv);
 
-  // Učitaj service-specific .env ako postoji
   const serviceEnv = dotenv.config({
     path: resolve(process.cwd(), ".env"),
     override: true,

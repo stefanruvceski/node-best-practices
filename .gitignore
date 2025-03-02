@@ -129,6 +129,5 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-pnp-lock.yaml
 # macOS
 .DS_Store
